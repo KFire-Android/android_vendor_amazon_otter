@@ -1,0 +1,14 @@
+#!/system/bin/sh
+
+ID=`getprop ro.build.display.id`
+CN=`getprop ro.build.version.codename`
+REL=`getprop ro.build.version.release`
+BD=`getprop ro.build.date`
+TYPE=`getprop ro.build.type`
+BH=`getprop ro.build.host`
+TAGS=`getprop ro.build.tags`
+
+log -p i -t "metrics.sw_version" "buildinfo:def:id=${ID},cn=${CN},rel=${REL},bd=\"${BD}\",type=${TYPE},bh=${BH},tags=${TAGS}:"
+
+exit 0
+
