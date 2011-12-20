@@ -24,38 +24,38 @@
 #PRODUCT_COPY_FILES += \
 
 # system/etc/(others)
-PRODUCT_COPY_FILES += \
-vendor/amazon/otter/proprietary/alsa.conf:system/usr/share/alsa/alsa.conf \
-vendor/amazon/otter/proprietary/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
-vendor/amazon/otter/proprietary/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
-vendor/amazon/otter/proprietary/default.conf:system/usr/share/alsa/pcm/default.conf \
-vendor/amazon/otter/proprietary/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
-vendor/amazon/otter/proprietary/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
-vendor/amazon/otter/proprietary/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
-vendor/amazon/otter/proprietary/front.conf:system/usr/share/alsa/pcm/front.conf \
-vendor/amazon/otter/proprietary/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
-vendor/amazon/otter/proprietary/modem.conf:system/usr/share/alsa/pcm/modem.conf \
-vendor/amazon/otter/proprietary/rear.conf:system/usr/share/alsa/pcm/rear.conf \
-vendor/amazon/otter/proprietary/side.conf:system/usr/share/alsa/pcm/side.conf \
-vendor/amazon/otter/proprietary/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
-vendor/amazon/otter/proprietary/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
-vendor/amazon/otter/proprietary/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
-vendor/amazon/otter/proprietary/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
-vendor/amazon/otter/proprietary/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
+#PRODUCT_COPY_FILES += \
+#vendor/amazon/otter/proprietary/alsa.conf:system/usr/share/alsa/alsa.conf \
+#vendor/amazon/otter/proprietary/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
+#vendor/amazon/otter/proprietary/center_lfe.conf:system/usr/share/alsa/pcm/center_lfe.conf \
+#vendor/amazon/otter/proprietary/default.conf:system/usr/share/alsa/pcm/default.conf \
+#vendor/amazon/otter/proprietary/dmix.conf:system/usr/share/alsa/pcm/dmix.conf \
+#vendor/amazon/otter/proprietary/dpl.conf:system/usr/share/alsa/pcm/dpl.conf \
+#vendor/amazon/otter/proprietary/dsnoop.conf:system/usr/share/alsa/pcm/dsnoop.conf \
+#vendor/amazon/otter/proprietary/front.conf:system/usr/share/alsa/pcm/front.conf \
+#vendor/amazon/otter/proprietary/iec958.conf:system/usr/share/alsa/pcm/iec958.conf \
+#vendor/amazon/otter/proprietary/modem.conf:system/usr/share/alsa/pcm/modem.conf \
+#vendor/amazon/otter/proprietary/rear.conf:system/usr/share/alsa/pcm/rear.conf \
+#vendor/amazon/otter/proprietary/side.conf:system/usr/share/alsa/pcm/side.conf \
+#vendor/amazon/otter/proprietary/surround40.conf:system/usr/share/alsa/pcm/surround40.conf \
+#vendor/amazon/otter/proprietary/surround41.conf:system/usr/share/alsa/pcm/surround41.conf \
+#vendor/amazon/otter/proprietary/surround50.conf:system/usr/share/alsa/pcm/surround50.conf \
+#vendor/amazon/otter/proprietary/surround51.conf:system/usr/share/alsa/pcm/surround51.conf \
+#vendor/amazon/otter/proprietary/surround71.conf:system/usr/share/alsa/pcm/surround71.conf \
 
 # system/lib
 #PRODUCT_COPY_FILES += \
 
 
 # system/lib/ducati
-PRODUCT_COPY_FILES += \
-vendor/amazon/otter/proprietary/base_image_sys_m3.xem3:/system/lib/ducati/base_image_sys_m3.xem3 \
-vendor/amazon/otter/proprietary/base_image_app_m3.xem3:/system/lib/ducati/base_image_app_m3.xem3 \
+#PRODUCT_COPY_FILES += \
+#vendor/amazon/otter/proprietary/base_image_sys_m3.xem3:/system/lib/ducati/base_image_sys_m3.xem3 \
+#vendor/amazon/otter/proprietary/base_image_app_m3.xem3:/system/lib/ducati/base_image_app_m3.xem3 \
 
 # system/lib/hw
-PRODUCT_COPY_FILES += \
-vendor/amazon/otter/proprietary/lights.omap4.so:/system/lib/hw/lights.omap4.so \
-vendor/amazon/otter/proprietary/sensors.sensors.omap4sdp.so.so:/system/lib/hw/sensors.sensors.omap4sdp.so.so \
+#PRODUCT_COPY_FILES += \
+#vendor/amazon/otter/proprietary/lights.omap4.so:/system/lib/hw/lights.omap4.so \
+#vendor/amazon/otter/proprietary/sensors.sensors.omap4sdp.so.so:/system/lib/hw/sensors.sensors.omap4sdp.so.so \
 
 # system/xbin
 #PRODUCT_COPY_FILES += \
