@@ -37,7 +37,7 @@ on fs
     mount ext4 /dev/block/platform/mmci-omap-hs.1/by-name/splash /dropbox wait noatime nosuid nodev errors=continue
 
 # permissions for bluetooth.
-#    chown bluetooth bluetooth ro.bt.bdaddr_path
+    chown bluetooth bluetooth ro.bt.bdaddr_path
 
 # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type

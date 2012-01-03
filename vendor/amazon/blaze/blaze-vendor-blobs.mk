@@ -137,7 +137,9 @@ PRODUCT_COPY_FILES  += \
 	vendor/amazon/blaze/proprietary/tiwlan.ini.activemode:/system/etc/wifi/tiwlan.ini.activemode \
 	vendor/amazon/blaze/proprietary/tiwlan_ap.ini:/system/etc/wifi/softap/tiwlan_ap.ini \
 	vendor/amazon/blaze/proprietary/tiwlan_drv.ko:/system/etc/wifi/tiwlan_drv.ko \
+	vendor/amazon/blaze/proprietary/wlan_loader:/system/bin/wlan_loader \
 	vendor/amazon/blaze/proprietary/wlan_cu.st:/system/etc/wifi/wlan_cu.st \
+	vendor/amazon/blaze/proprietary/run_wlancu.sh:/system/xbin/run_wlancu.sh \
 	vendor/amazon/blaze/proprietary/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
 	vendor/amazon/blaze/proprietary/idme:/system/bin/idme \
 
