@@ -21,14 +21,18 @@
     <!-- Defines the shutdown options shown in the reboot dialog. -->
     <array name="shutdown_reboot_options">
         <item>Reboot</item>
-        <item>Recovery</item>
+<!--
+** Unless the TWRP team puts a setting in their recovery to reset the
+** bootmode back to 4000 the KF will always get stuck in a recovery loop
+** if this option is selected on reboot, therefor to keep people from
+** asking; remove it.
+-->  
     </array>
 
     <!-- Do not translate. Defines the shutdown actions passed to the kernel.
          The first item should be empty for regular reboot. -->
     <string-array name="shutdown_reboot_actions">
         <item></item>
-        <item>recovery</item>
     </string-array>
 
 </resources>

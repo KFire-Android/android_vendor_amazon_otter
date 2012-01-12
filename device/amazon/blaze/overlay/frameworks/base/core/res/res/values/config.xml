@@ -116,8 +116,11 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">tiwlan0</string>
 
+<!--This is known to cause issues w/ black screens on wake w/ both the KF and
+**the LGE LS670 (Optimus S) w/ specific kernels, therefor disable it by default
+**and let people turn it on and their own risk.-->
     <!-- Enable the screen-off animation -->
-    <bool name="config_enableScreenOffAnimation">true</bool>
+    <bool name="config_enableScreenOffAnimation">false</bool>
 
     <bool name="config_animateScreenLights">false</bool>
 
@@ -150,13 +153,17 @@
     right side of status bar -->
     <bool name="cm_default_soft_buttons_left">true</bool>
 
+<!-- Truly a horrible design part on Amazon leaving out all hard buttons
+** Lets set home to true it's going to be one of the first things most
+** change I think, set search to false to save room plus w/ plenty of
+** screen space I expect search widgets.-->
     <!-- toggle which buttons to show if soft buttons enabled
     quickna: opens notification area with the press of one button
     instead of swiping the long way up/down on big tablets -->
-    <bool name="cm_default_show_soft_home">false</bool>
+    <bool name="cm_default_show_soft_home">true</bool>
     <bool name="cm_default_show_soft_menu">true</bool>
     <bool name="cm_default_show_soft_back">true</bool>
-    <bool name="cm_default_show_soft_search">true</bool>
+    <bool name="cm_default_show_soft_search">false</bool>
     <bool name="cm_default_show_soft_quick_na">true</bool>
 
     <!-- disables display of lockscreen both on boot as on
