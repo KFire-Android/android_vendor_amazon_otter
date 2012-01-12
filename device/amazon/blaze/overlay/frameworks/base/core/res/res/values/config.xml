@@ -116,11 +116,8 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">tiwlan0</string>
 
-<!--This is known to cause issues w/ black screens on wake w/ both the KF and
-**the LGE LS670 (Optimus S) w/ specific kernels, therefor disable it by default
-**and let people turn it on and their own risk.-->
     <!-- Enable the screen-off animation -->
-    <bool name="config_enableScreenOffAnimation">false</bool>
+    <bool name="config_enableScreenOffAnimation">true</bool>
 
     <bool name="config_animateScreenLights">false</bool>
 
