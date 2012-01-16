@@ -1,0 +1,3 @@
+# Using U.S. date format...
+01/16/2012:
+     -Added HISTORY.md
