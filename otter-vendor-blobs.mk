@@ -30,12 +30,11 @@
 # limitations under the License.
 
 # All the blobs necessary for Kindle Fire
+#	vendor/amazon/otter/proprietary/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
 PRODUCT_COPY_FILES  += \
 	vendor/amazon/otter/proprietary/hostapd.conf:/system/etc/wifi/softap/hostapd.conf \
-	vendor/amazon/otter/proprietary/bootanimation.zip:/system/media/bootanimation.zip \
 	vendor/amazon/otter/proprietary/sensors.otter.so:/system/lib/hw/sensors.otter.so \
 	vendor/amazon/otter/proprietary/libwpa_client.so:/system/lib/libwpa_client.so \
-	vendor/amazon/otter/proprietary/FileManager.apk:/system/app/FileManager.apk \
 	vendor/amazon/otter/proprietary/battery_log.sh:/system/bin/battery_log.sh \
 	vendor/amazon/otter/proprietary/klog.sh:/system/bin/klog.sh \
 	vendor/amazon/otter/proprietary/temperature_log.sh:/system/bin/temperature_log.sh \
@@ -51,8 +50,9 @@ PRODUCT_COPY_FILES  += \
 	vendor/amazon/otter/proprietary/tiwlan_drv.ko:/system/etc/wifi/tiwlan_drv.ko \
 	vendor/amazon/otter/proprietary/wlan_cu.st:/system/etc/wifi/wlan_cu.st \
 	vendor/amazon/otter/proprietary/idme:/system/bin/idme \
-	vendor/amazon/otter/proprietary/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
-	vendor/amazon/otter/proprietary/wlan_loader:/system/bin/wlan_loader
+	vendor/amazon/otter/proprietary/wlan_loader:/system/bin/wlan_loader \
+	vendor/amazon/otter/proprietary/base_image_app_m3.xem3:system/lib/ducati/base_image_app_m3.xem3 \
+	vendor/amazon/otter/proprietary/base_image_sys_m3.xem3:system/lib/ducati/base_image_sys_m3.xem3 \
 
 # All the blobs necessary for Kindle Fire
 PRODUCT_COPY_FILES  += \
