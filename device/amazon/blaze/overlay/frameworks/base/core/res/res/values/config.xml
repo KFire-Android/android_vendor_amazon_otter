@@ -13,10 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <!-- A product with no SD card == not removable. -->
+    <bool name="config_externalStorageRemovable" product="nosdcard">true</bool>
+
     <!-- Flag indicating whether the surface flinger is inefficient
         at performing a blur.  Used by parts of the UI to turn off
         the blur effect where it isn't worth the performance hit. -->
@@ -116,8 +119,12 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">tiwlan0</string>
 
+<!-- So I've never actually seen this cause issues on a device before: screen on
+** animation is known to cause issues with wake but again never seen it with
+** screen off before, clearly it does cause issues though so let's disable it by
+** defaults. People can reenable at their own risk (depending on kernel).--> 
     <!-- Enable the screen-off animation -->
-    <bool name="config_enableScreenOffAnimation">true</bool>
+    <bool name="config_enableScreenOffAnimation">false</bool>
 
     <bool name="config_animateScreenLights">false</bool>
 
