@@ -21,7 +21,6 @@
     <!-- Defines the shutdown options shown in the reboot dialog. -->
     <array name="shutdown_reboot_options">
         <item>Перезагрузить</item>
-        <item>Recovery</item>
     </array>
 
 </resources>
