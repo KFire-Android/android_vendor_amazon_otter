@@ -11,35 +11,47 @@
 ### Initialize
 [setup linux/OS X](http://source.android.com/source/initializing.html) please note: it must be sun-java-6, not openjdk
 
-### Download CM7 sources (use the IngCr3at1on android repo because github and CM still haven't fixed prebuilts on gingerbread)
+### Create a Working directory and download Google's repo command
 
 ```bash
 mkdir cm7
 cd cm7/
 curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > repo
 chmod a+x repo
+```
+
+### Sync with CyanogenMod sources (use the IngCr3at1on repo because CM hasn't updated their prebuilts on github last I looked, also this will include the my vendor/cyanogen directory which removes CM support apps)
+
+### For Mac
+```bash
 ./repo init -u git://github.com/IngCr3at1on/android.git -b gingerbread
 ./repo sync -j16
 ```
 
-### Download Kindle Fire device tree
+### For Ubuntu/Linux
+```bash
+repo init -u git://github.com/IngCr3at1on/android.git -b gingerbread
+repo sync -j16
+```
 
+### Download Kindle Fire device tree (No need to pull in Rom manager it is removed in this build)
 ```bash
 git clone git://github.com/whistlestop/CM7KF.git github
-mkdir -p device/amazon/
-mkdir -p vendor/amazon/
-rsync -a github/device/blaze device/amazon/
-rsync -a github/vendor/blaze vendor/amazon/
+mkdir -p device/amazon/ vendor/amazon
+cd device/amazon
+ln -s ../../github/device/blaze blaze
+cd ../../vendor/amazon/
+ln -s ../../github/vendor/blaze blaze
+cd ../..
 ```
 
 ### Compile
-
 ```bash
 source build/envsetup.sh
 brunch blaze -j$(grep -c processor /proc/cpuinfo)
 ```
 
-this should produce a flashable out/target/product/otter/cm_otter-ota-eng.$USER.zip file, if the signing process fails try to run it again:
+this should produce a flashable out/target/product/otter/cm_otter-ota-eng.$USER.zip file, if the signing process fails try to run it again (the following command is extrapolated from the CM9 walkthrough and I have not tested it).
 
 ```bash
 ./device/amazon/blaze/releasetools/ota_from_target_files -v \
