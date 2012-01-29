@@ -5,6 +5,7 @@
 |||
 |-----------------------------------:|:--------------------------|
 |**Discussion and build thred**: | http://forum.xda-developers.com/showthread.php?t=1390773
+|**Looking to build for CWM (recovery option included in boot menu?)**: | [checkout the CWM branch](https://github.com/IngCr3at1on/CM7KF/tree/cwm)
 
 ## Building 
 
