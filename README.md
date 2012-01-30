@@ -73,5 +73,6 @@ this should produce a flashable out/target/product/otter/cm_otter-ota-eng.$USER.
 * If you are coming from stock you will need to move all your books from /sdcard/Books/ to sdcard/kindle/ (please note some of these may need to be redownloaded).
 
 ### Credits and Thanks
+* Whistlestop for the initial repos.
 * sitic for writing the walk through for JackpotClavin's CM9 repo.
 * Pkt_Lnt providing fixes listed in extra information.
