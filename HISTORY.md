@@ -19,3 +19,6 @@ Using U.S. date format...
 
 ###continued:
 * Updated README.md: Corrected symlinks and added an extra information section towards the end (put keyboard fix information in there, please add other fixes like this section).
+
+###01/30/2012:
+* Updated README.md: More extra information for after flash.
