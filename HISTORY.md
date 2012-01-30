@@ -16,3 +16,5 @@ Using U.S. date format...
 ###01/29/2012:
 * Updated README.md
 * Changed History layout slightly
+#### continued:
+* Updated README.md: Corrected symlinks and added an extra information section towards the end (put keyboard fix information in there, please add other fixes like this section).

@@ -40,9 +40,9 @@ repo sync -j16
 git clone git://github.com/whistlestop/CM7KF.git github
 mkdir -p device/amazon/ vendor/amazon
 cd device/amazon
-ln -s ../../github/device/blaze blaze
+ln -s ../../github/device/amazon blaze
 cd ../../vendor/amazon/
-ln -s ../../github/vendor/blaze blaze
+ln -s ../../github/vendor/amazon blaze
 cd ../..
 ```
 
@@ -63,12 +63,13 @@ this should produce a flashable out/target/product/otter/cm_otter-ota-eng.$USER.
            out/target/product/blaze/obj/PACKAGING/target_files_intermediates/cyanogen_blaze_target_files-eng.$USER.zip out/target/product/blaze/cm-7.2.0-RC0-blaze-KANG-signed.zip
 ```
 
-
 ###Notes for compiling on Mac OS X (by davidnintendo)
 * Xcode 4 may not work. Use Xcode 3 instead. You may need to modify the installer to get it working on Lion, though. Use Google to get instructions. 
 * MacPorts didn't work well for me either. Homebrew worked better. 
 * If your drive is on a non case-sensitive format, you will need to use a disk image to build. Make sure to have enough space on it to compile because everything including intermediate files will be created in the disk image. 40 GB will be enough. Also, if you don't want those 40 GB occupied from the first second, create the image in a dynamic format.
 
+### Extra information
+* Some people have had issues getting the numbers to return to the top of the stock keyboard; to fix this go into the keyboard settings and make sure your language settings are correct.
 
 ### Credits
 * Thanks to sitic for writing the walk through for JackpotClavin's CM9 repo.
