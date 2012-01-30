@@ -40,9 +40,9 @@ repo sync -j16
 git clone git://github.com/whistlestop/CM7KF.git github
 mkdir -p device/amazon/ vendor/amazon
 cd device/amazon
-ln -s ../../github/device/amazon blaze
+ln -s ../../github/device/amazon/blaze blaze
 cd ../../vendor/amazon/
-ln -s ../../github/vendor/amazon blaze
+ln -s ../../github/vendor/amazon/blaze blaze
 cd ../..
 ```
 
