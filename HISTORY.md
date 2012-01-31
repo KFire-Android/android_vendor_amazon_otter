@@ -22,3 +22,6 @@ Using U.S. date format...
 
 ###01/30/2012:
 * Updated README.md: More extra information for after flash.
+
+###01/31/2012:
+* Updated README.md: Credits and discussion/build threads.

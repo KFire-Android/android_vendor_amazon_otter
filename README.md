@@ -4,8 +4,9 @@
 
 |||
 |-----------------------------------:|:--------------------------|
-|**Discussion and build thred**: | http://forum.xda-developers.com/showthread.php?t=1390773
-|**Looking to build for CWM (recovery option included in boot menu?)**: | [checkout the CWM branch](https://github.com/IngCr3at1on/CM7KF/tree/cwm)
+|**Whistlestop's Discussion and build thread** | http://forum.xda-developers.com/showthread.php?t=1390773
+|**Skimp Killah's binary build** | http://forum.xda-developers.com/showthread.php?t=1472609
+|**Looking to build for CWM (recovery option included in boot menu)?** | [checkout the CWM branch](https://github.com/IngCr3at1on/CM7KF/tree/cwm)
 
 ## Building 
 
@@ -73,6 +74,7 @@ this should produce a flashable out/target/product/otter/cm_otter-ota-eng.$USER.
 * If you are coming from stock you will need to move all your books from /sdcard/Books/ to sdcard/kindle/ (please note some of these may need to be redownloaded).
 
 ### Credits and Thanks
+* JackpotClavin for origin concept build.
 * Whistlestop for the initial repos.
 * sitic for writing the walk through for JackpotClavin's CM9 repo.
 * Pkt_Lnt providing fixes listed in extra information.
