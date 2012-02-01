@@ -71,7 +71,7 @@ If the signing process fails try to run it again (the following command is extra
 * If your drive is on a non case-sensitive format, you will need to use a disk image to build. Make sure to have enough space on it to compile because everything including intermediate files will be created in the disk image. 40 GB will be enough. Also, if you don't want those 40 GB occupied from the first second, create the image in a dynamic format.
 
 ### Extra information
-* Some people have had issues getting the numbers to return to the top of the stock keyboard; to fix this go into the keyboard settings and make sure your language settings are correct.
+* **Fixed**Some people have had issues getting the numbers to return to the top of the stock keyboard; to fix this go into the keyboard settings and make sure your language settings are correct.
 * If you are coming from stock you will need to move all your books from /sdcard/Books/ to sdcard/kindle/ (please note some of these may need to be redownloaded).
 
 ### Credits and Thanks
