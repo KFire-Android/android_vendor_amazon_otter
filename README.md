@@ -38,7 +38,7 @@ repo sync -j16
 
 ### Download Kindle Fire device tree (No need to pull in Rom manager it is removed in this build)
 ```bash
-git clone git://github.com/whistlestop/CM7KF.git github
+git clone git://github.com/IngCr3at1on/CM7KF.git github
 mkdir -p device/amazon/ vendor/amazon
 cd device/amazon
 ln -s ../../github/device/amazon/blaze blaze
