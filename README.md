@@ -53,7 +53,8 @@ source build/envsetup.sh
 brunch blaze -j$(grep -c processor /proc/cpuinfo)
 ```
 
-this should produce a flashable out/target/product/otter/cm_otter-ota-eng.$USER.zip file, if the signing process fails try to run it again (the following command is extrapolated from the CM9 walkthrough and I have not tested it).
+This should produce a flashable out/target/product/blaze/cm-7.2.0-RC0-blaze-KANG-signed.zip file. 
+If the signing process fails try to run it again (the following command is extrapolated from the CM9 walkthrough and I have not tested it).
 
 ```bash
 ./device/amazon/blaze/releasetools/ota_from_target_files -v \
