@@ -29,6 +29,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#vendor/amazon/otter/proprietary/tiwlan_drv.ko:/system/etc/wifi/tiwlan_drv.ko \
+#vendor/amazon/otter/proprietary/tiap_drv.ko:/system/etc/wifi/softap/tiap_drv.ko \
+
 # All the blobs necessary for Kindle Fire
 PRODUCT_COPY_FILES  += \
 vendor/amazon/otter/proprietary/hostapd.conf:/system/etc/wifi/softap/hostapd.conf \
@@ -43,10 +46,8 @@ vendor/amazon/otter/proprietary/firmware.bin:/system/etc/wifi/firmware.bin \
 vendor/amazon/otter/proprietary/firmware_ap.bin:/system/etc/wifi/softap/firmware_ap.bin \
 vendor/amazon/otter/proprietary/hostapd.conf:/system/etc/wifi/softap/hostapd.conf \
 vendor/amazon/otter/proprietary/tiwlan_ap.ini:/system/etc/wifi/softap/tiwlan_ap.ini \
-vendor/amazon/otter/proprietary/tiap_drv.ko:/system/etc/wifi/softap/tiap_drv.ko \
 vendor/amazon/otter/proprietary/tiwlan.ini.activemode:/system/etc/wifi/tiwlan.ini.activemode \
 vendor/amazon/otter/proprietary/tiwlan.ini:/system/etc/wifi/tiwlan.ini \
-vendor/amazon/otter/proprietary/tiwlan_drv.ko:/system/etc/wifi/tiwlan_drv.ko \
 vendor/amazon/otter/proprietary/wlan_cu.st:/system/etc/wifi/wlan_cu.st \
 vendor/amazon/otter/proprietary/idme:/system/bin/idme \
 vendor/amazon/otter/proprietary/wlan_loader:/system/bin/wlan_loader \
