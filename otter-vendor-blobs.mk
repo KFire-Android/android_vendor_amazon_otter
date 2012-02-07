@@ -29,9 +29,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#vendor/amazon/otter/proprietary/tiwlan_drv.ko:/system/etc/wifi/tiwlan_drv.ko \
-#vendor/amazon/otter/proprietary/tiap_drv.ko:/system/etc/wifi/softap/tiap_drv.ko \
-
 # All the blobs necessary for Kindle Fire
 PRODUCT_COPY_FILES  += \
 vendor/amazon/otter/proprietary/hostapd.conf:/system/etc/wifi/softap/hostapd.conf \
@@ -71,6 +68,8 @@ vendor/amazon/otter/proprietary/alsa/pcm/surround51.conf:/system/usr/share/alsa/
 vendor/amazon/otter/proprietary/alsa/pcm/surround71.conf:/system/usr/share/alsa/pcm/surround71.conf \
 vendor/amazon/otter/proprietary/alsa/alsa.conf:/system/usr/share/alsa/alsa.conf \
 vendor/amazon/otter/proprietary/alsa/asound.conf:/system/etc/asound.conf \
-vendor/amazon/otter/proprietary/alsa/Audible.param:/system/etc/Audible.param
+vendor/amazon/otter/proprietary/alsa/Audible.param:/system/etc/Audible.param \
+vendor/amazon/otter/proprietary/tiwlan_drv.ko:/system/etc/wifi/tiwlan_drv.ko \
+vendor/amazon/otter/proprietary/tiap_drv.ko:/system/etc/wifi/softap/tiap_drv.ko \
 
 
