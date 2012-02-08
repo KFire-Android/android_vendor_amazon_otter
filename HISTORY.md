@@ -37,3 +37,5 @@ Using U.S. date format...
 * Added idle/standby information to extra info.
 * Updated build threads.
 * Updated credits.
+* CyanogenMod broke their build, see turkish translations for [packages/apps/settings](https://github.com/CyanogenMod/android_packages_apps_Settings/blob/4f83c6a302a1af1de31fd004b555399311f8e95b/res/values-tr/strings.xml#L1391), changed in commit [4f83c6a302a1af1de31fd004b555399311f8e95b](https://github.com/CyanogenMod/android_packages_apps_Settings/commit/4f83c6a302a1af1de31fd004b555399311f8e95b). Specifically note the repeat entry of 'device_settings_title'. Added an overlay to fix this (hopefully we can remove this in the future...).
+
