@@ -6,6 +6,7 @@
 |-----------------------------------:|:--------------------------|
 |**Whistlestop's Discussion and build thread** | http://forum.xda-developers.com/showthread.php?t=1390773
 |**Skimp Killah's binary build** | http://forum.xda-developers.com/showthread.php?t=1472609
+|**Takenover83's 'Custom TWRP backup'** | http://forum.xda-developers.com/showthread.php?t=1475054
 |**Looking to build for CWM (recovery option included in boot menu)?** | [checkout the CWM branch](https://github.com/IngCr3at1on/CM7KF/tree/cwm)
 
 ## Building 
@@ -73,9 +74,12 @@ If the signing process fails try to run it again (the following command is extra
 ### Extra information
 * **Fixed**Some people have had issues getting the numbers to return to the top of the stock keyboard; to fix this go into the keyboard settings and make sure your language settings are correct.
 * If you are coming from stock you will need to move all your books from /sdcard/Books/ to sdcard/kindle/ (please note some of these may need to be redownloaded).
+* There is some confusion regarding the entries "Phone Idle" and "Cell Standby" in the battery/usage stats. This is referring to the device idle and standby, it could just as easily say "Tablet Idle" and "Device Standby" but it wasn't considered in the original creation (this can be resolved w/ an overlay most likely but I have not researched it). Your device battery is not wasting away to some mysterious phone/cell service so sleep easy.
 
 ### Credits and Thanks
 * JackpotClavin for origin concept build.
 * Whistlestop for the initial repos.
 * sitic for writing the walk through for JackpotClavin's CM9 repo.
 * Pkt_Lnt providing fixes listed in extra information.
+* SkimpKilla for compiling this into something people can flash (even if it is a bit modified ;) ).
+* Takenover83; a custom backup file is the weirdest concept ever but people seem to like it so have at it.
