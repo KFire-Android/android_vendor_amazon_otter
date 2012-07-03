@@ -25,6 +25,8 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin:system/etc/firmware/ti-connectivity/wl1271-nvs.bin.orig \
     vendor/amazon/otter/proprietary/etc/wifi/TQS_S_2.6.ini:system/etc/wifi/TQS_S_2.6.ini \
 
+#    vendor/amazon/otter/proprietary/bin/wpa_cli:/system/bin/wpa_cli \
+#    vendor/amazon/otter/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \
 # Prebuilts /bin
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/bin/rild:/system/bin/rild \
@@ -34,8 +36,6 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/bin/klog.sh:/system/bin/klog.sh \
     vendor/amazon/otter/proprietary/bin/fix-mac.sh:/system/bin/fix-mac.sh \
     vendor/amazon/otter/proprietary/bin/idme:/system/bin/idme \
-    vendor/amazon/otter/proprietary/bin/wpa_cli:/system/bin/wpa_cli \
-    vendor/amazon/otter/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \
 
 # Prebuilts /system/etc
 PRODUCT_COPY_FILES += \
@@ -45,11 +45,6 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/etc/vold.fstab:/system/etc/vold.fstab \
     vendor/amazon/otter/proprietary/etc/firmware/ducati-m3.bin:/system/etc/firmware/ducati-m3.bin \
 
-#   vendor/amazon/otter/proprietary/usr/keychars/qtouch-touchscreen.kcm:/system/usr/keychars/qtouch-touchscreen.kcm \
-#   vendor/amazon/otter/proprietary/usr/keylayout/qtouch-touchscreen.kl:/system/usr/keylayout/qtouch-touchscreen.kl \
-#   vendor/amazon/otter/proprietary/usr/idc/omap-keypad.idc:/system/usr/idc/omap-keypad.idc \
-#   vendor/amazon/otter/proprietary/usr/keychars/omap-keypad.kcm:/system/usr/keychars/omap-keypad.kcm \
-#   vendor/amazon/otter/proprietary/usr/keylayout/omap-keypad.kl:/system/usr/keylayout/omap-keypad.kl \
 # Prebuilt /system/usr
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/usr/idc/ilitek_i2c.idc:/system/usr/idc/ilitek_i2c.idc \
@@ -57,11 +52,11 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/usr/keylayout/twl6030_pwrbutton.kl:/system/usr/keylayout/twl6030_pwrbutton.kl \
     vendor/amazon/otter/proprietary/usr/keylayout/AVRCP.kl:/system/usr/keylayout/AVRCP.kl \
 
+#    vendor/amazon/otter/proprietary/lib/libwpa_client.so:/system/lib/libwpa_client.so \
 # Prebuilt /system/lib
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/lib/sensors.otter.so:/system/lib/hw/sensors.otter.so \
     vendor/amazon/otter/proprietary/lib/libidme.so:/system/lib/libidme.so \
-    vendor/amazon/otter/proprietary/lib/libwpa_client.so:/system/lib/libwpa_client.so \
 
 # Graphics
 PRODUCT_COPY_FILES += \
@@ -81,16 +76,4 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/imgtec/bin/pvrsrvctl:/system/bin/pvrsrvctl \
     vendor/amazon/otter/proprietary/imgtec/etc/powervr.ini:/system/etc/powervr.ini \
 
-# Temporarily use prebuilt DOMX
-# Prebuilts /system/lib
-PRODUCT_COPY_FILES += \
-    vendor/amazon/otter/proprietary/lib/libdomx.so:/system/lib/libdomx.so \
-    vendor/amazon/otter/proprietary/lib/libmm_osal.so:/system/lib/libmm_osal.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so:/system/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
-    vendor/amazon/otter/proprietary/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
 
