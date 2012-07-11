@@ -18,21 +18,21 @@
 # All the blobs necessary for Kindle Fire
 
 
+#    vendor/amazon/otter/proprietary/bin/wpa_cli:/system/bin/wpa_cli \
+#    vendor/amazon/otter/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \
 # Prebuilts /bin
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/bin/battery_log.sh:/system/bin/battery_log.sh \
     vendor/amazon/otter/proprietary/bin/idme:/system/bin/idme \
     vendor/amazon/otter/proprietary/bin/klog.sh:/system/bin/klog.sh \
     vendor/amazon/otter/proprietary/bin/temperature_log.sh:/system/bin/temperature_log.sh \
-    vendor/amazon/otter/proprietary/bin/wpa_cli:/system/bin/wpa_cli \
-    vendor/amazon/otter/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \
 
 
+#    vendor/amazon/otter/proprietary/lib/libwpa_client.so:/system/lib/libwpa_client.so \
 # Prebuilt /system/lib
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/lib/sensors.otter.so:/system/lib/hw/sensors.otter.so \
     vendor/amazon/otter/proprietary/lib/libidme.so:/system/lib/libidme.so \
-    vendor/amazon/otter/proprietary/lib/libwpa_client.so:/system/lib/libwpa_client.so \
 
 # Graphics
 PRODUCT_COPY_FILES += \
