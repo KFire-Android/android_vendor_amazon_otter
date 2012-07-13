@@ -33,6 +33,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/lib/sensors.otter.so:/system/lib/hw/sensors.otter.so \
     vendor/amazon/otter/proprietary/lib/libidme.so:/system/lib/libidme.so \
+    vendor/amazon/otter/proprietary/lib/libion.so:/system/lib/libion.so \
 
 # Graphics
 PRODUCT_COPY_FILES += \
