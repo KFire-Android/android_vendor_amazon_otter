@@ -18,8 +18,6 @@
 # All the blobs necessary for Kindle Fire
 
 
-#    vendor/amazon/otter/proprietary/bin/wpa_cli:/system/bin/wpa_cli \
-#    vendor/amazon/otter/proprietary/bin/wpa_supplicant:/system/bin/wpa_supplicant \
 # Prebuilts /bin
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/bin/battery_log.sh:/system/bin/battery_log.sh \
@@ -33,7 +31,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/lib/sensors.otter.so:/system/lib/hw/sensors.otter.so \
     vendor/amazon/otter/proprietary/lib/libidme.so:/system/lib/libidme.so \
-    vendor/amazon/otter/proprietary/lib/libion.so:/system/lib/libion.so \
 
 # Graphics
 PRODUCT_COPY_FILES += \
@@ -52,17 +49,4 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/imgtec/bin/pvrsrvinit_SGX540_120:/system/bin/pvrsrvinit \
     vendor/amazon/otter/proprietary/imgtec/bin/pvrsrvctl:/system/bin/pvrsrvctl \
     vendor/amazon/otter/proprietary/imgtec/etc/powervr.ini:/system/etc/powervr.ini \
-
-# Temporarily use prebuilt DOMX
-# Prebuilts /system/lib
-PRODUCT_COPY_FILES += \
-    vendor/amazon/otter/proprietary/lib/libdomx.so:/system/lib/libdomx.so \
-    vendor/amazon/otter/proprietary/lib/libmm_osal.so:/system/lib/libmm_osal.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so:/system/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so \
-    vendor/amazon/otter/proprietary/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
-    vendor/amazon/otter/proprietary/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
 
