@@ -68,3 +68,5 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
     vendor/amazon/otter/proprietary/lib/libstagefrighthw.so:/system/lib/libstagefrighthw.so \
     vendor/amazon/otter/proprietary/lib/libtiutils.so:/system/lib/libtiutils.so \
+    vendor/amazon/otter/proprietary/vendor/lib/hw/hwcomposer.otter.so:/system/vendor/lib/hw/hwcomposer.otter.so \
+
