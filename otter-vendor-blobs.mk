@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
     vendor/amazon/otter/proprietary/imgtec/lib/libsrv_um_SGX540_120.so:/system/vendor/lib/libsrv_um_SGX540_120.so \
     vendor/amazon/otter/proprietary/imgtec/lib/libusc_SGX540_120.so:/system/vendor/lib/libusc_SGX540_120.so \
     vendor/amazon/otter/proprietary/imgtec/bin/pvrsrvinit_SGX540_120:/system/bin/pvrsrvinit \
-    vendor/amazon/otter/proprietary/imgtec/bin/pvrsrvctl:/system/bin/pvrsrvctl \
+    vendor/amazon/otter/proprietary/imgtec/bin/pvrsrvctl_SGX540_120:/system/bin/pvrsrvctl \
     vendor/amazon/otter/proprietary/imgtec/etc/powervr.ini:/system/etc/powervr.ini \
 
 # DOMX/OMAP4
