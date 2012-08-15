@@ -17,16 +17,21 @@
 #
 # All the blobs necessary for Kindle Fire
 
+VENDOR_BLOB := vendor/amazon/otter/proprietary
 
 # Prebuilts /bin
 PRODUCT_COPY_FILES += \
-    vendor/amazon/otter/proprietary/bin/battery_log.sh:/system/bin/battery_log.sh \
-    vendor/amazon/otter/proprietary/bin/idme:/system/bin/idme \
-    vendor/amazon/otter/proprietary/bin/klog.sh:/system/bin/klog.sh \
-    vendor/amazon/otter/proprietary/bin/temperature_log.sh:/system/bin/temperature_log.sh \
+    $(VENDOR_BLOB)/bin/battery_log.sh:system/bin/battery_log.sh \
+    $(VENDOR_BLOB)/bin/idme:system/bin/idme \
+    $(VENDOR_BLOB)/bin/klog.sh:system/bin/klog.sh \
+    $(VENDOR_BLOB)/bin/temperature_log.sh:system/bin/temperature_log.sh \
+
+# Prebuilt /system/etc/firmware
+PRODUCT_COPY_FILES += \
+    $(VENDOR_BLOB)/firmware/ducati-m3.512MB.bin:system/etc/firmware/ducati-m3.512MB.bin
 
 # Prebuilt /system/lib
 PRODUCT_COPY_FILES += \
-    vendor/amazon/otter/proprietary/lib/libidme.so:/system/lib/libidme.so \
-    vendor/amazon/otter/proprietary/lib/hw/sensors.otter.so:/system/lib/hw/sensors.otter.so \
+    $(VENDOR_BLOB)/lib/libidme.so:system/lib/libidme.so \
+    $(VENDOR_BLOB)/lib/hw/sensors.otter.so:system/lib/hw/sensors.otter.so \
 
