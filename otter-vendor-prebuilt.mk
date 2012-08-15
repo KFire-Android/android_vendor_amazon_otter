@@ -17,7 +17,7 @@
 #
 # All the blobs necessary for Kindle Fire
 
-VENDOR_EXTRA := vendor/amzon/otter/proprietary
+VENDOR_EXTRA := vendor/amazon/otter/proprietary
 
 # Prebuilts for wla
 PRODUCT_COPY_FILES += \
