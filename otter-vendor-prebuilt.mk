@@ -21,7 +21,7 @@ VENDOR_EXTRA := vendor/amazon/otter/proprietary
 
 # Prebuilts for wla
 PRODUCT_COPY_FILES += \
-    $(VENDOR_EXTRA)/bin/wpa_client:/system/bin/wpa_client \
+    $(VENDOR_EXTRA)/bin/wpa_client:/system/bin/wpa_cli \
     $(VENDOR_EXTRA)/bin/wpa_client:/system/bin/wpa_supplicant \
     $(VENDOR_EXTRA)/lib/libwpa_client.so:system/lib/libwpa_client.so \
     $(VENDOR_EXTRA)/firmware/wlan/wl127x-fw-4-mr.bin:system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
