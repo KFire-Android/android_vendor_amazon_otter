@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt omap4xxx files
 PRODUCT_COPY_FILES += \
+    $(VENDOR_EXRTA)/omap4xxx/hwcomposer.otter.so:system/vendor/lib/hw/hwcomposer.otter.so \
     $(VENDOR_EXRTA)/omap4xxx/libdomx.so:system/lib/libdomx.so \
     $(VENDOR_EXRTA)/omap4xxx/libion.so:system/lib/libion.so \
     $(VENDOR_EXRTA)/omap4xxx/libOMX.TI.DUCATI1.MISC.SAMPLE.so:system/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so \
