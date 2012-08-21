@@ -38,6 +38,7 @@ PURPOSE AND NONINFRINGEMENT; AND (B) IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  
 */ /**************************************************************************/
 #ifdef DEBUG_RELEASE_BUILD
 #pragma optimize( "", off )
@@ -112,7 +113,7 @@ PVRSRV_ERROR OSUnReservePhys(IMG_VOID *pvCpuVAddr, IMG_SIZE_T ui32Bytes, IMG_UIN
  *  INVALIDATE	Invalidate w/o flush
  */
 
-#if defined(__linux__) && defined(__KERNEL__)
+#if (defined(__linux__) && defined(__KERNEL__)) || (UNDER_CE >= 600)
 
 IMG_VOID OSFlushCPUCacheKM(IMG_VOID);
 
@@ -190,7 +191,7 @@ static INLINE IMG_BOOL OSInvalidateCPUCacheRangeKM(IMG_HANDLE hOSMemHandle,
 
 #endif /* defined(__linux__) && defined(__KERNEL__) */
 
-#if defined(__linux__) || defined(__QNXNTO__)
+#if (defined(__linux__) || defined(__QNXNTO__))
 PVRSRV_ERROR OSRegisterDiscontigMem(IMG_SYS_PHYADDR *pBasePAddr,
 									IMG_VOID *pvCpuVAddr, 
 									IMG_SIZE_T ui32Bytes,
@@ -237,7 +238,7 @@ static INLINE PVRSRV_ERROR OSUnRegisterDiscontigMem(IMG_VOID *pvCpuVAddr,
 #endif	/* defined(__linux__) */
 
 
-#if  defined(__linux__) || defined(__QNXNTO__)
+#if (defined(__linux__) || defined(__QNXNTO__))
 #ifdef INLINE_IS_PRAGMA
 #pragma inline(OSReserveDiscontigPhys)
 #endif
@@ -679,7 +680,7 @@ IMG_BOOL OSAccessOK(IMG_VERIFY_TEST eVerification, IMG_VOID *pvUserPtr, IMG_SIZE
 PVRSRV_ERROR OSCopyToUser(IMG_PVOID pvProcess, IMG_VOID *pvDest, IMG_VOID *pvSrc, IMG_SIZE_T ui32Bytes);
 PVRSRV_ERROR OSCopyFromUser(IMG_PVOID pvProcess, IMG_VOID *pvDest, IMG_VOID *pvSrc, IMG_SIZE_T ui32Bytes);
 
-#if defined(__linux__) || defined(__QNXNTO__)
+#if (defined(__linux__) || defined(__QNXNTO__))
 PVRSRV_ERROR OSAcquirePhysPageAddr(IMG_VOID* pvCPUVAddr, 
 									IMG_SIZE_T ui32Bytes, 
 									IMG_SYS_PHYADDR *psSysPAddr,

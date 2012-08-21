@@ -37,6 +37,7 @@ PURPOSE AND NONINFRINGEMENT; AND (B) IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  
 */ /**************************************************************************/
 
 #if defined(PVRSRV_REFCOUNT_DEBUG)
@@ -48,15 +49,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define PVRSRV_LOCK_CCB()
 #define PVRSRV_UNLOCK_CCB()
 #else /* __linux__ */
-#include <linux/spinlock.h>
-static DEFINE_SPINLOCK(gsCCBLock);
-#define PVRSRV_LOCK_CCB() \
-	{ \
-		unsigned long flags; \
-		spin_lock_irqsave(&gsCCBLock, flags);
-#define PVRSRV_UNLOCK_CCB()	\
-		spin_unlock_irqrestore(&gsCCBLock, flags); \
-	}
+#include <linux/mutex.h>
+static DEFINE_MUTEX(gsCCBLock);
+#define PVRSRV_LOCK_CCB()	mutex_lock(&gsCCBLock)
+#define PVRSRV_UNLOCK_CCB()	mutex_unlock(&gsCCBLock)
 #endif /* __linux__ */
 
 #define PVRSRV_REFCOUNT_CCB_MAX			512

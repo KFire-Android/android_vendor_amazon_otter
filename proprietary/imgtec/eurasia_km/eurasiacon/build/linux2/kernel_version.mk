@@ -36,18 +36,19 @@
 # COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#   
 ### ###########################################################################
 
 $(if $(KERNELDIR),,$(error KERNELDIR must be set to obtain a version))
 
 override KERNEL_VERSION := \
- $(shell grep "^VERSION = " $(KERNELSRC)/Makefile | cut -f3 -d' ')
+ $(shell grep "^VERSION = " $(KERNELDIR)/Makefile | cut -f3 -d' ')
 override KERNEL_PATCHLEVEL := \
- $(shell grep "^PATCHLEVEL = " $(KERNELSRC)/Makefile | cut -f3 -d' ')
+ $(shell grep "^PATCHLEVEL = " $(KERNELDIR)/Makefile | cut -f3 -d' ')
 override KERNEL_SUBLEVEL := \
- $(shell grep "^SUBLEVEL = " $(KERNELSRC)/Makefile | cut -f3 -d' ')
+ $(shell grep "^SUBLEVEL = " $(KERNELDIR)/Makefile | cut -f3 -d' ')
 override KERNEL_EXTRAVERSION := \
- $(shell grep "^EXTRAVERSION = " $(KERNELSRC)/Makefile | cut -f3 -d' ')
+ $(shell grep "^EXTRAVERSION = " $(KERNELDIR)/Makefile | cut -f3 -d' ')
 
 # Break the kernel version up into a space separated list
 kernel_version_as_list := $(KERNEL_VERSION) \

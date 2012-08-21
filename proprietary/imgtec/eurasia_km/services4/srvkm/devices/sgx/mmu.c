@@ -38,6 +38,7 @@ PURPOSE AND NONINFRINGEMENT; AND (B) IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  
 */ /**************************************************************************/
 
 #include "sgxdefs.h"
@@ -373,9 +374,12 @@ static IMG_VOID MakeKernelPageReadWrite(IMG_PVOID ulCPUVAddr)
     pmd_t *psPMD;
     pte_t *psPTE;
     pte_t ptent;
+    spinlock_t *psPTLock;
     IMG_UINT32 ui32CPUVAddr = (IMG_UINT32) ulCPUVAddr;
+    struct mm_struct *psMM = current->active_mm;
 
-    psPGD = pgd_offset_k(ui32CPUVAddr);
+
+    psPGD = pgd_offset(psMM, ui32CPUVAddr);
     if (pgd_none(*psPGD) || pgd_bad(*psPGD))
     {
         PVR_ASSERT(0);
@@ -392,11 +396,13 @@ static IMG_VOID MakeKernelPageReadWrite(IMG_PVOID ulCPUVAddr)
     {
         PVR_ASSERT(0);
     }
-	psPTE = (pte_t *)pte_offset_kernel(psPMD, ui32CPUVAddr);
 
-	ptent = ptep_modify_prot_start(&init_mm, ui32CPUVAddr, psPTE);
+    psPTE = (pte_t *)pte_offset_map_lock(psMM, psPMD, ui32CPUVAddr, &psPTLock);
+
+	ptent = ptep_modify_prot_start(psMM, ui32CPUVAddr, psPTE);
 	ptent = pte_mkwrite(ptent);
-	ptep_modify_prot_commit(&init_mm, ui32CPUVAddr, psPTE, ptent);
+	ptep_modify_prot_commit(psMM, ui32CPUVAddr, psPTE, ptent);
+	pte_unmap_unlock(psPTE, psPTLock);
 
 	flush_tlb_all();
 }
@@ -408,11 +414,13 @@ static IMG_VOID MakeKernelPageReadOnly(IMG_PVOID ulCPUVAddr)
     pmd_t *psPMD;
     pte_t *psPTE;
     pte_t ptent;
+    spinlock_t *psPTLock;
     IMG_UINT32 ui32CPUVAddr = (IMG_UINT32) ulCPUVAddr;
+    struct mm_struct *psMM = current->active_mm;
 
 	OSWriteMemoryBarrier();
 
-    psPGD = pgd_offset_k(ui32CPUVAddr);
+    psPGD = pgd_offset(psMM, ui32CPUVAddr);
     if (pgd_none(*psPGD) || pgd_bad(*psPGD))
     {
         PVR_ASSERT(0);
@@ -430,11 +438,13 @@ static IMG_VOID MakeKernelPageReadOnly(IMG_PVOID ulCPUVAddr)
         PVR_ASSERT(0);
     }
 
-	psPTE = (pte_t *)pte_offset_kernel(psPMD, ui32CPUVAddr);
 
-	ptent = ptep_modify_prot_start(&init_mm, ui32CPUVAddr, psPTE);
+    psPTE = (pte_t *)pte_offset_map_lock(psMM, psPMD, ui32CPUVAddr, &psPTLock);
+
+	ptent = ptep_modify_prot_start(psMM, ui32CPUVAddr, psPTE);
 	ptent = pte_wrprotect(ptent);
-	ptep_modify_prot_commit(&init_mm, ui32CPUVAddr, psPTE, ptent);
+	ptep_modify_prot_commit(psMM, ui32CPUVAddr, psPTE, ptent);
+	pte_unmap_unlock(psPTE, psPTLock);
 
 	flush_tlb_all();
 
