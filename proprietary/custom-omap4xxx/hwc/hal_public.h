@@ -107,7 +107,7 @@ typedef struct
 	/* If Post2 is called and a previous call to post() was not made,
 	 * try to find a suitable framebuffer handle to flip
 	 */
-	int bPost2FindFramebuffer;
+//	int bPost2FindFramebuffer;
 
 	/* HWC path for present posts */
 	int (*Post2)(framebuffer_device_t *fb, buffer_handle_t *buffers,
