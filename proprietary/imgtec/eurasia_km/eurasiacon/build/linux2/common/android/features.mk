@@ -1,27 +1,42 @@
-#
-# Copyright (C) Imagination Technologies Ltd. All rights reserved.
+########################################################################### ###
+#@Copyright     Copyright (c) Imagination Technologies Ltd. All Rights Reserved
+#@License       Dual MIT/GPLv2
 # 
-# This program is free software; you can redistribute it and/or modify it
-# under the terms and conditions of the GNU General Public License,
-# version 2, as published by the Free Software Foundation.
+# The contents of this file are subject to the MIT license as set out below.
 # 
-# This program is distributed in the hope it will be useful but, except 
-# as otherwise stated in writing, without any warranty; without even the 
-# implied warranty of merchantability or fitness for a particular purpose. 
-# See the GNU General Public License for more details.
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 # 
-# You should have received a copy of the GNU General Public License along with
-# this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 # 
-# The full GNU General Public License is included in this distribution in
-# the file called "COPYING".
-#
-# Contact Information:
-# Imagination Technologies Ltd. <gpl-support@imgtec.com>
-# Home Park Estate, Kings Langley, Herts, WD4 8LZ, UK 
+# Alternatively, the contents of this file may be used under the terms of
+# the GNU General Public License Version 2 ("GPL") in which case the provisions
+# of GPL are applicable instead of those above.
 # 
-#
+# If you wish to allow use of your version of this file only under the terms of
+# GPL, and not to allow others to use your version of this file under the terms
+# of the MIT license, indicate your decision by deleting the provisions above
+# and replace them with the notice and other provisions required by GPL as set
+# out in the file called "GPL-COPYING" included in this distribution. If you do
+# not delete the provisions above, a recipient may use your version of this file
+# under the terms of either the MIT license or GPL.
+# 
+# This License is also included in this distribution in the file called
+# "MIT-COPYING".
+# 
+# EXCEPT AS OTHERWISE STATED IN A NEGOTIATED AGREEMENT: (A) THE SOFTWARE IS
+# PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+# BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+# PURPOSE AND NONINFRINGEMENT; AND (B) IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### ###########################################################################
 
 include ../common/android/platform_version.mk
 
@@ -29,8 +44,6 @@ include ../common/android/platform_version.mk
 #
 SUPPORT_ANDROID_PLATFORM := 1
 SUPPORT_OPENGLES1_V1_ONLY := 1
-SUPPORT_OPENVG := 0
-SUPPORT_OPENGL := 0
 
 # Meminfo IDs are required for buffer stamps
 #
@@ -75,6 +88,17 @@ SUPPORT_PVRSRV_GET_DC_SYSTEM_BUFFER := 0
 #
 SUPPORT_LARGE_GENERAL_HEAP := 1
 
+# Enable a page pool for uncached memory allocations. This improves
+# the performance of such allocations because the pages are temporarily
+# not returned to Linux and therefore do not have to be re-invalidated
+# (fewer cache invalidates are needed).
+#
+# Default the cache size to a maximum of 5400 pages (~21MB). If using
+# newer Linux kernels (>=3.0) the cache may be reclaimed and become
+# smaller than this maximum during runtime.
+#
+PVR_LINUX_MEM_AREA_POOL_MAX_PAGES ?= 5400
+
 ##############################################################################
 # EGL connect/disconnect hooks only available since Froyo
 # Obsolete in future versions
@@ -111,7 +135,7 @@ ifeq ($(is_at_least_gingerbread),1)
 UNITTEST_INCLUDES += $(ANDROID_ROOT)/frameworks/base/native/include
 endif
 
-ifeq ($(is_future_version),1)
+ifeq ($(is_at_least_jellybean),1)
 UNITTEST_INCLUDES += \
  $(ANDROID_ROOT)/frameworks/native/include \
  $(ANDROID_ROOT)/frameworks/native/opengl/include \
@@ -284,7 +308,7 @@ endif
 # ICS and earlier should rate-limit composition by waiting for 3D renders
 # to complete in the compositor's eglSwapBuffers().
 #
-ifeq ($(is_future_version),0)
+ifeq ($(is_at_least_jellybean),0)
 PVR_ANDROID_COMPOSITOR_WAIT_FOR_RENDER := 1
 endif
 
