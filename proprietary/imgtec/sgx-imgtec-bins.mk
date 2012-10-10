@@ -1,7 +1,6 @@
 # Graphics/IMGTEC
 SGX_LOCAL_PATH := vendor/amazon/otter/proprietary/imgtec
 
-ifdef CM_BUILD
 SGX_MODULES:
 	make clean -C $(SGX_LOCAL_PATH)/eurasia_km/eurasiacon/build/linux2/omap4430_android
 	cp $(TARGET_KERNEL_SOURCE)/drivers/video/omap2/omapfb/omapfb.h $(KERNEL_OUT)/drivers/video/omap2/omapfb/omapfb.h
@@ -11,7 +10,6 @@ SGX_MODULES:
 #	mv $(KERNEL_OUT)/../../target/kbuild/omaplfb_sgx540_120.ko $(KERNEL_MODULES_OUT)
 
 TARGET_KERNEL_MODULES += SGX_MODULES
-endif
 
 # Graphics
 PRODUCT_COPY_FILES += \
